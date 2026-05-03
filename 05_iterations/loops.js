@@ -24,3 +24,20 @@
 //     console.log(i);
 //     i++;
 // } while (i<10);
+
+//for of
+
+// const arr=[1,2,3,4,5,5,6];
+
+// for (const element of arr) {
+//     console.log(element)
+    
+// }
+
+
+//maps
+
+// const arr=[1,2,3,4,5,5,6]
+// arr.map((num)=>{
+//     console.log(num)
+// })
