@@ -17,3 +17,17 @@
 // console.log(c)
 
 //let , const block scoped , var global scoped
+
+
+// function one() {
+//     const username='Dhanush'
+
+//     function two() {
+//         const website='youtube'
+//         console.log(username)
+//     }
+//     console.log(website)
+//     two()
+// }
+
+// one()
