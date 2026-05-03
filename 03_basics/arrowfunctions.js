@@ -5,4 +5,8 @@
 
 (function add(){
     console.log('Hello')
+})();
+
+(()=>{
+    console.log('db')
 })()
