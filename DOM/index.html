@@ -4,12 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="bg-black">
-        <h1 class="heading">DOM Learning</h1>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning</h1>
+        <button onclick="changeText()">Change Text</button>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
+
+    <ul>
+        <li>First</li>
+        <li>second</li>
+        <li>third</li>
+    </ul>
 </body>
+<script>
+    function changeText() {
+        const title=document.getElementById('title')
+
+        if(title.innerHTML==='DOM Learning'){
+            title.innerHTML='Text Changed'
+        }else{
+            title.innerHTML='DOM Learning'
+        }
+        
+    }
+    document.querySelector('li:first-child').style.color="blue"
+</script>
 </html>
