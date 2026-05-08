@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: rgb(201, 195, 195);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .clock{
+        width: 300px;
+        height: 100px;
+        background: orange;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .btn{
+        display: flex;
+        padding-top: 20px;
+        gap: 10px;
+            }
+</style>
+<body>
+    <div class="clock">
+
+    </div>
+    <div class="btn">
+
+        <button onclick="clock()" id="start">Start</button>
+        <button onclick="stop()" id="stop">Stop</button>
+    </div>
+</body>
+<script>
+    let result=document.querySelector('.clock')
+    let intervalId;
+    function clock(){
+    intervalId=setInterval(() => {
+        let date=new Date()
+        let ans=date.toLocaleTimeString()
+        result.innerHTML=ans
+    }, 1000);
+}
+function stop() {
+    clearInterval(intervalId)
+    result.innerHTML='00 : 00 : 00 XX'
+
+    
+}
+</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background: pink;
+            color: brown;
+            height: 100vh;
+            margin: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .head{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .buttons{
+            display: flex;
+            gap: 10px;
+        }
+
+        button{
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .result{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+        }
+        
+
+    </style>
+</head>
+
+<body>
+
+    <div class="head">
+
+        <h1>Will you be mine ❤️</h1>
+
+        <div class="buttons">
+            <button onclick="hack()" id="yes">Yes</button>
+            <button onclick="hack1()" id="no">No</button>
+        </div>
+
+        <div class="result"></div>
+    </div>
+
+
+</body>
+
+<script>
+
+    let result = document.querySelector('.result')
+
+    function hack() {
+
+        setInterval(() => {
+
+            const text = document.createElement('h2')
+
+            text.innerHTML = 'I LOVE YOU!!!! ❤️'
+            text.style.color = 'red'
+
+            result.appendChild(text)
+
+        }, 2000)
+
+    }
+
+    function hack1() {
+        const no=document.querySelector('#no')
+
+            no.remove()
+            hack()
+        
+    }
+
+</script>
+
+</html>
