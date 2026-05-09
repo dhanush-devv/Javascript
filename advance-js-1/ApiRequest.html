@@ -21,13 +21,14 @@
 
         .photo {
             height: 300px;
-            width: 300px;
+            width: 100%;
             background-color: antiquewhite;
             border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
+            
+            
         }
     </style>
 </head>
@@ -56,6 +57,10 @@
             })
             .then((data) => {
                 document.getElementById('profilePic').src=data.avatar_url
+                 document.getElementById('profilePic').style.width='100%'
+                 document.getElementById('profilePic').style.height='100%'
+                  document.getElementById('profilePic').style.borderRadius='10px'
+
                 document.getElementById('name').innerText = data.name;
 
                 document.getElementById('follower').textContent = data.follower;
